@@ -50,15 +50,15 @@
   }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 .header {
   padding-top: $spacing * 3;
   background: white;
   position: relative;
-  // border-bottom: 1px solid $lightgrey;
+  border-bottom: 1px solid $lightgrey;
 
   &:before {
-    // content: '';
+    content: '';
     position: absolute;
     z-index: -1;
     width: 99%;
@@ -72,12 +72,18 @@
 
 .nav {
   display: flex;
+  align-items: center;
 
   .menu {
     margin-left: auto;
   }
 
   .cta {
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    padding: 5px 10px;
+
     input {
       width: 127px;
       border: none;
@@ -92,6 +98,10 @@
   position: relative;
   display: flex;
   margin-left: -40px;
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 0;
+  }
 }
 
 .logo {
@@ -117,6 +127,10 @@
 
 .infos {
   padding-left: $spacing * 2;
+
+  @media screen and (max-width: 1000px) {
+    padding-left: $spacing * 1;
+  }
 }
 
 .name {
