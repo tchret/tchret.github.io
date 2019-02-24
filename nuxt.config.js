@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const resolve = require('path').resolve
 
 module.exports = {
   mode: 'universal',
@@ -14,7 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
@@ -32,13 +33,14 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/data'],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-sass-resources-loader', resolve(__dirname, 'assets/fonts.scss')],
+    ['nuxt-sass-resources-loader', resolve(__dirname, 'assets/variables.scss')]
   ],
 
   /*
@@ -48,8 +50,16 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+
     extend(config, ctx) {
-      
+      config.node = {
+        fs: "empty"
+      }
+
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader'
+      })
     }
   }
 }
