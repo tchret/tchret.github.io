@@ -15,9 +15,14 @@
             </div>
           </div>
         </div>
+        <div class='menu'>
+          <span class='cta'>
+            <send-icon></send-icon>
+            <input :value='siteData().email' readonly @click='$event.target.select()' @focus="$event.target.select()" />
+          </span>
+        </div>
       </nav>
-      <div class='description'>
-        {{siteData().description}}
+      <div class='description' v-html='siteData().description'>
       </div>
     </container>
   </div>
@@ -25,9 +30,10 @@
 
 <script>
   import Container from '~/components/Container'
+  import SendIcon from '~/components/icons/Send'
 
   export default {
-    components: { Container },
+    components: { Container, SendIcon },
     data() {
       return {
         imageLoaded: false
@@ -49,9 +55,10 @@
   padding-top: $spacing * 3;
   background: white;
   position: relative;
-  border-bottom: 1px solid $lightgrey;
+  // border-bottom: 1px solid $lightgrey;
 
   &:before {
+    // content: '';
     position: absolute;
     z-index: -1;
     width: 99%;
@@ -60,7 +67,24 @@
     left: .5%;
     border-radius: 100px / 2px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-    content: '';
+  }
+}
+
+.nav {
+  display: flex;
+
+  .menu {
+    margin-left: auto;
+  }
+
+  .cta {
+    input {
+      width: 127px;
+      border: none;
+      margin-left: $spacing;
+      outline: 0;
+      font-weight: 500;
+    }
   }
 }
 
@@ -97,6 +121,7 @@
 
 .name {
   font-size: 16px;
+  color: $brand;
   font-weight: 500;
 }
 
@@ -108,6 +133,10 @@
 .description {
   font-size: 16px;
   padding: ($spacing * 5) 0;
+
+  a {
+    color: $dark;
+  }
 }
 
 </style>
