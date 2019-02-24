@@ -17,7 +17,7 @@
         </div>
         <div class='menu'>
           <a class='button' v-if='!displayContactInfos' @click='displayContactInfos = true'>
-            <send-icon></send-icon>
+            <send-white-icon></send-white-icon>
             Contact
           </a>
           <div v-else>
@@ -37,9 +37,10 @@
 <script>
   import Container from '~/components/Container'
   import SendIcon from '~/components/icons/Send'
+  import SendWhiteIcon from '~/components/icons/SendWhite'
 
   export default {
-    components: { Container, SendIcon },
+    components: { Container, SendIcon, SendWhiteIcon },
     data() {
       return {
         imageLoaded: false,
@@ -118,9 +119,7 @@
 
   & /deep/ svg {
     margin-right: $spacing * 0.5;
-    path {
-      fill: white;
-    }
+
   }
 }
 
