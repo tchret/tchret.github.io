@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "rm -rf dist && DEPLOY_ENV=GH_PAGES nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "deploy": "rm -rf dist && DEPLOY_ENV=GH_PAGES nuxt generate && push-dir --dir=dist --branch=master --cleanup --verbose"
   },
   "dependencies": {
     "js-yaml": "^3.12.1",
