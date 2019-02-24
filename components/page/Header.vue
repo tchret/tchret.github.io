@@ -16,7 +16,10 @@
           </div>
         </div>
         <div class='menu'>
-          <span class='cta'>
+          <a class='button'>
+
+          </a>
+          <span class='input'>
             <send-icon></send-icon>
             <input :value='siteData().email' readonly @click='$event.target.select()' @focus="$event.target.select()" />
           </span>
@@ -78,11 +81,9 @@
     margin-left: auto;
   }
 
-  .cta {
-    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
-    border: 1px solid #d1d5da;
+  .input {
     border-radius: 3px;
-    padding: 5px 10px;
+    border: none;
 
     input {
       width: 127px;
