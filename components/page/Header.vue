@@ -16,13 +16,16 @@
           </div>
         </div>
         <div class='menu'>
-          <a class='button'>
-
-          </a>
-          <span class='input'>
+          <a class='button' v-if='!displayContactInfos' @click='displayContactInfos = true'>
             <send-icon></send-icon>
-            <input :value='siteData().email' readonly @click='$event.target.select()' @focus="$event.target.select()" />
-          </span>
+            Contact
+          </a>
+          <div v-else>
+            <span class='input'>
+              <send-icon></send-icon>
+              <input :value='siteData().email' readonly @click='$event.target.select()' @focus="$event.target.select()" />
+            </span>
+          </div>
         </div>
       </nav>
       <div class='description' v-html='siteData().description'>
@@ -39,7 +42,8 @@
     components: { Container, SendIcon },
     data() {
       return {
-        imageLoaded: false
+        imageLoaded: false,
+        displayContactInfos: false
       }
     },
     mounted() {
@@ -91,6 +95,31 @@
       margin-left: $spacing;
       outline: 0;
       font-weight: 500;
+    }
+  }
+}
+
+.button {
+  background: $brand;
+  color: white;
+  line-height: 32px;
+  user-select: none;
+  padding: 0 $spacing * 1.5;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: $radius;
+  box-shadow: 0px 0px 0px 1px inset rgba(black, 0.12), 0px 1px 1px rgba(black, .12);
+  cursor: pointer;
+  transition: background .15s ease-in-out ;
+
+  &:hover {
+    background: darken($brand, 5%);
+  }
+
+  & /deep/ svg {
+    margin-right: $spacing * 0.5;
+    path {
+      fill: white;
     }
   }
 }
@@ -148,10 +177,6 @@
 .description {
   font-size: 16px;
   padding: ($spacing * 5) 0;
-
-  a {
-    color: $dark;
-  }
 }
 
 </style>

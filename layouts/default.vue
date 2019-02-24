@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style lang='scss'>
 html, input
 {
   font-family: "AeroportM", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -15,12 +15,16 @@ html, input
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: $black;
+  color: $dark;
   font-weight: 300;
 }
 *, *:before, *:after
 {
   box-sizing: border-box;
   margin: 0;
+}
+
+a {
+  color: $dark;
 }
 </style>
