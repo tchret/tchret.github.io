@@ -158,7 +158,7 @@
   padding-left: $spacing * 2;
 
   @media screen and (max-width: 1000px) {
-    padding-left: $spacing * 1;
+    padding-left: $spacing * 1.5;
   }
 }
 
