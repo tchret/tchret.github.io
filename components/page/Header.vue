@@ -16,6 +16,18 @@
           </div>
         </div>
         <div class='menu'>
+          <div class='more-container'>
+            <a
+              :class='{hovered: this.popoverMoreActive, more: true}'
+              @mouseenter='activatePopoverMore'
+              @mouseleave='disablePopoverMore'
+            >
+              <more-icon></more-icon>
+            </a>
+              <div @mouseenter='activatePopoverMore' @mouseleave='disablePopoverMore'>
+                <popover-more :active='popoverMoreActive' ></popover-more>
+              </div>
+          </div>
           <a class='button' v-if='!displayContactInfos' @click='displayContactInfos = true'>
             <send-white-icon></send-white-icon>
             Contact
@@ -38,13 +50,16 @@
   import Container from '~/components/Container'
   import SendIcon from '~/components/icons/Send'
   import SendWhiteIcon from '~/components/icons/SendWhite'
+  import MoreIcon from '~/components/icons/More'
+  import PopoverMore from '~/components/Popover/More'
 
   export default {
-    components: { Container, SendIcon, SendWhiteIcon },
+    components: { Container, SendIcon, SendWhiteIcon, MoreIcon, PopoverMore },
     data() {
       return {
         imageLoaded: false,
-        displayContactInfos: false
+        displayContactInfos: false,
+        popoverMoreActive: false
       }
     },
     mounted() {
@@ -54,11 +69,23 @@
 
       logoImg.src = '/logo.png'
 
+    },
+    methods: {
+      activatePopoverMore() {
+        clearTimeout(this.timer)
+        this.popoverMoreActive = true
+      },
+      disablePopoverMore() {
+        this.timer = setTimeout(() => {
+          this.popoverMoreActive = false
+        }, 300)
+      }
     }
   }
 </script>
 
 <style lang='scss' scoped>
+
 .header {
   padding-top: $spacing * 3;
   background: white;
@@ -81,9 +108,52 @@
 .nav {
   display: flex;
   align-items: center;
+  @media(max-width: 420px) {
+    position: relative;
+  }
 
   .menu {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media(max-width: 420px) {
+      position: initial !important;
+    }
+  }
+
+  .more-container {
+    margin-right: 12px;
+    align-self: stretch;
+    display: flex;
+    position: relative;
+    @media(max-width: 1050px) {
+      position: initial;
+    }
+  }
+
+  .more {
+    position: relative;
+    top: 1px;
+    margin-right: $spacing * 2;
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+    align-self: stretch;
+    padding: 0 6px;
+    margin: 0 -6px;
+    display: flex;
+    align-items: center;
+    transition: .15s ease-in-out opacity;
+
+    &:hover, &.hovered {
+      opacity: .6;
+    }
+
+    svg {
+      display: block;
+    }
   }
 
   .input {

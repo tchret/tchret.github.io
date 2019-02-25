@@ -6,3 +6,25 @@ description: |-
   <br/>
   I am currently working on my new portfolio, and maybe yours. <a href='http://twitter.com/tchret' target='_blank'>Stay in the loop on twitter</a>
 email: 'tchret@gmail.com'
+avatar: tchret.jpg
+slug: tchret
+links:
+  - name: Twitter
+    href: http://twitter.com/tchret
+    color: '#2AA3F0'
+
+  - name: Dribbble
+    href: http://dribbble.com/tchret
+    color: '#ea4c89'
+
+  - name: Facebook
+    href: http://facebook.com/tchret
+    color: '#3C5B96'
+
+  - name: Product Hunt
+    href: https://producthunt.com/@tchret
+    color: '#D85636'
+
+  - name: Instagram
+    href: https://instagram.com/tchret
+    color: '#EB4B5A'
