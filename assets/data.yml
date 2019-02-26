@@ -28,3 +28,17 @@ links:
   - name: Instagram
     href: https://instagram.com/tchret
     color: '#EB4B5A'
+
+clients:
+  - name: Hackerloop
+    url: 'http://hackerloop.com'
+  - name: Redbull
+    url: 'https://redbull.com'
+  - name: Aircall
+    url: 'http://aircall.io'
+  - name: Mozza
+    url: 'http://mozza.io'
+  - name: Omnidoc
+    url: 'https://omnidoc.fr'
+  - name: Le Wagon
+    url: 'https://lewagon.com'

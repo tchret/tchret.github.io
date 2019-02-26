@@ -1,20 +1,17 @@
 <template>
   <div>
     <Header></Header>
+    <ItemList :items='siteData().clients' :title='`Featured clients`'></ItemList>
   </div>
 </template>
 
 <script>
 import Header from '~/components/page/Header'
+import ItemList from '~/components/page/ItemList'
 
 export default {
   components: {
-    Header
+    Header, ItemList
   }
 }
 </script>
-
-<style lang='scss' scoped>
-
-
-</style>
