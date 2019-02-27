@@ -19,10 +19,9 @@
         position: absolute;
         left: 0; right: 0;
         content: '';
-        height: 2px;
-        background: $dark;
+        height: 1px;
+        background: rgba($dark, .2);
         bottom: -13px;
-        transform: translateY(25%);
       }
     }
   }

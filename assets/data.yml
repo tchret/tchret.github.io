@@ -42,3 +42,29 @@ clients:
     url: 'https://omnidoc.fr'
   - name: Le Wagon
     url: 'https://lewagon.com'
+
+skills:
+  - name: 'UX / UI'
+  - name: 'Front-end'
+  - name: 'Artistic direction'
+  - name: 'Branding'
+
+tools:
+  - name: 'Sketch'
+    url: 'https://www.sketchapp.com/'
+  - name: 'Vue.js'
+    url: 'https://vuejs.org/'
+  - name: 'Nuxt'
+    url: 'https://nuxtjs.org/'
+  - name: 'React.js'
+    url: 'https://reactjs.org/'
+  - name: 'Ruby on Rails'
+    url: 'https://rubyonrails.org/'
+  - name: 'Abstract'
+    url: 'https://goabstract.com'
+  - name: 'Github'
+    url: 'https://github.com'
+  - name: 'Sublime text'
+    url: 'https://www.sublimetext.com/'
+  - name: 'SASS'
+    url: 'https://sass-lang.com/'

@@ -7,7 +7,7 @@
       <div class='list-container'>
         <div class='list'>
           <div class='item-container' v-for='item in items'>
-            <div class='item' @click='this.window.open(item.url, "_blank")'>
+            <div :class='{item: true, clickable: item.url}' @click='handleClickItem(item)'>
               <div class='item-image' :style='{backgroundImage: `url(${iconUrl(item.name)})`}'>
               </div>
               <div>
@@ -34,6 +34,9 @@
     methods: {
       iconUrl(name) {
         return `/clients/${snakeCase(name)}.png`
+      },
+      handleClickItem(item) {
+        window.open(item.url, "_blank")
       }
     }
   }
@@ -41,8 +44,14 @@
 
 <style lang='scss' scoped>
 .item-list {
-  margin-top: $spacing * 4;
+  margin-top: $spacing * 5;
+
+  &:last-child {
+    margin-bottom: $spacing * 5;
+  }
   overflow-x: hidden;
+  overflow-y: hidden;
+
 }
 .list-container {
   margin: 0 -56px;
@@ -57,7 +66,8 @@
   width: 100%;
   flex-wrap: wrap;
   margin-top: 0;
-
+  margin-bottom: -($spacing * 3);
+  // overflow: hidden;
   @media(max-width: 950px) {
     justify-content: center;
   }
@@ -66,19 +76,22 @@
   .item-container {
     flex: 0 0 16.66666%;
     text-align: center;
-    margin-bottom: $spacing * 5;
+    margin-bottom: $spacing * 3;
 
     .item {
-      cursor: pointer;
       display: inline-block;
       padding: ($spacing * 1) ($spacing * 4);
       border-radius: 5px;
       transition: .15s ease-in-out;
       margin-top: -($spacing * 1);
 
-      &:hover {
-        background: rgba($dark, 0.03)
+      &.clickable {
+        cursor: pointer;
+        &:hover {
+          background: rgba($dark, 0.03)
+        }
       }
+
     }
 
     .name {
