@@ -9,7 +9,7 @@
     border-bottom: 1px solid $lightgrey;
     padding-bottom: $spacing * 1.5;
     font-weight: 500;
-    margin-bottom: $spacing * 3;
+    margin-bottom: $spacing * 2;
     color: $dark;
 
     span {
@@ -18,7 +18,7 @@
       &:after {
         position: absolute;
         left: 0; right: 0;
-        content: '';
+        // content: '';
         height: 1px;
         background: rgba($dark, .2);
         bottom: -13px;

@@ -7,7 +7,7 @@
       <div class='list-container'>
         <div class='list'>
           <div class='item-container' v-for='item in items'>
-            <div :class='{item: true, clickable: item.url}' @click='handleClickItem(item)'>
+            <div :class='{item: true, clickable: item.url}' @click='item.url && handleClickItem(item)'>
               <div class='item-image' :style='{backgroundImage: `url(${iconUrl(item.name)})`}'>
               </div>
               <div>
@@ -54,7 +54,7 @@
 
 }
 .list-container {
-  margin: 0 -56px;
+  margin: 0 -40px;
 
   @media(max-width: 950px) {
     margin: 0 -25px;
@@ -74,7 +74,7 @@
 
 
   .item-container {
-    flex: 0 0 16.66666%;
+    flex: 0 0 12.5%;
     text-align: center;
     margin-bottom: $spacing * 3;
 
@@ -107,8 +107,8 @@
 }
 
 .item-image {
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
   background-size: cover !important;
 }
