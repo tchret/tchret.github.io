@@ -1,8 +1,16 @@
 <template>
   <div>
+    <Header></Header>
     <nuxt/>
   </div>
 </template>
+
+<script>
+  import Header from '~/components/page/Header'
+  export default {
+    components: { Header }
+  }
+</script>
 
 <style lang='scss'>
 html, input
@@ -18,6 +26,17 @@ html, input
   color: $dark;
   font-weight: 300;
 }
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 *, *:before, *:after
 {
   box-sizing: border-box;

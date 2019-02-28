@@ -42,6 +42,7 @@
       </nav>
       <div class='description' v-html='siteData().description'>
       </div>
+      <tabs></tabs>
     </container>
   </div>
 </template>
@@ -52,9 +53,10 @@
   import SendWhiteIcon from '~/components/icons/SendWhite'
   import MoreIcon from '~/components/icons/More'
   import PopoverMore from '~/components/Popover/More'
+  import Tabs from '~/components/Tabs'
 
   export default {
-    components: { Container, SendIcon, SendWhiteIcon, MoreIcon, PopoverMore },
+    components: { Container, SendIcon, SendWhiteIcon, MoreIcon, PopoverMore, Tabs },
     data() {
       return {
         imageLoaded: false,

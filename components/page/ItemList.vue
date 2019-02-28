@@ -1,7 +1,7 @@
 <template>
   <div class='item-list'>
     <container>
-      <header-title>
+      <header-title v-if='title'>
         {{title}}
       </header-title>
       <div class='list-container'>
@@ -44,7 +44,7 @@
 
 <style lang='scss' scoped>
 .item-list {
-  margin-top: $spacing * 5;
+  padding-top: $spacing * 5;
 
   &:last-child {
     margin-bottom: $spacing * 5;
@@ -69,7 +69,7 @@
   margin-bottom: -($spacing * 3);
   // overflow: hidden;
   @media(max-width: 800px) {
-    justify-content: center;
+    // justify-content: center;
   }
 
 

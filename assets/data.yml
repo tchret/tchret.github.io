@@ -29,6 +29,18 @@ links:
     href: https://instagram.com/tchret
     color: '#EB4B5A'
 
+tabs:
+  - name: Portfolio
+    active: true
+    slug: index
+    url: ''
+  - name: Work
+    slug: work
+  - name: Clients
+    slug: clients
+  - name: Skills
+    slug: skills
+
 clients:
   - name: Hackerloop
     url: 'http://hackerloop.com'
@@ -42,6 +54,7 @@ clients:
     url: 'https://omnidoc.fr'
   - name: Le Wagon
     url: 'https://lewagon.com'
+
 
 skills:
   - name: 'UX / UI'
@@ -72,3 +85,4 @@ tools:
     url: 'https://www.adobe.com/products/photoshop.html'
   - name: 'Illustrator'
     url: 'https://www.adobe.com/products/illustrator.html'
+
