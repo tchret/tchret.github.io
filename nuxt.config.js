@@ -18,7 +18,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css' }
     ]
   },
 
@@ -36,7 +38,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/data'],
+  plugins: ['~/plugins/data', {src: '~/plugins/carousel', ssr: false}],
 
   /*
   ** Nuxt.js modules

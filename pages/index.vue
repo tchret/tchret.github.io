@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div>
       <ItemList :items='siteData().skills' :title='`Skills & services`'></ItemList>
       <ItemList :items='siteData().clients' :title='`Featured clients`'></ItemList>
@@ -11,10 +12,11 @@
 <script>
 import Header from '~/components/page/Header'
 import ItemList from '~/components/page/ItemList'
+import Slider from '~/components/Slider'
 
 export default {
   components: {
-    Header, ItemList
+    Header, ItemList, Slider
   }
 }
 </script>

@@ -19,6 +19,9 @@
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^2.0.5",
     "push-dir": "^0.4.1",
+    "v-owl-carousel": "^1.0.8",
+    "vue-slick": "^1.1.15",
+    "vue-tiny-slider": "^0.1.32",
     "yaml-loader": "^0.5.0"
   },
   "devDependencies": {

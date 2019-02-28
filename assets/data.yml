@@ -33,13 +33,22 @@ tabs:
   - name: Portfolio
     active: true
     slug: index
-    url: ''
-  - name: Work
-    slug: work
+    url: '/'
+
   - name: Clients
     slug: clients
   - name: Skills
     slug: skills
+
+case_studies:
+  - slug: 'aircall'
+    client: aircall
+  - slug: 'manolo'
+    client: manolo_chretien
+  - slug: 'pages'
+    image: pages.png
+  - slug: 'redbull'
+    client: redbull
 
 clients:
   - name: Hackerloop
@@ -54,7 +63,8 @@ clients:
     url: 'https://omnidoc.fr'
   - name: Le Wagon
     url: 'https://lewagon.com'
-
+  - name: Manolo Chrétien
+    url: 'https://manolochretien.com'
 
 skills:
   - name: 'UX / UI'
