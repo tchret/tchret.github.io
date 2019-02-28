@@ -33,7 +33,7 @@ tabs:
   - name: Portfolio
     active: true
     slug: index
-    url: '/'
+    url: ''
 
   - name: Clients
     slug: clients
