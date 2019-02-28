@@ -12,6 +12,10 @@
     margin-bottom: $spacing * 2;
     color: $dark;
 
+    @media(max-width: 800px) {
+      text-align: center;
+    }
+
     span {
       position: relative;
 

@@ -68,3 +68,7 @@ tools:
     url: 'https://www.sublimetext.com/'
   - name: 'SASS'
     url: 'https://sass-lang.com/'
+  - name: 'Photoshop'
+    url: 'https://www.adobe.com/products/photoshop.html'
+  - name: 'Illustrator'
+    url: 'https://www.adobe.com/products/illustrator.html'

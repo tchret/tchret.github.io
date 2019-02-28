@@ -68,7 +68,7 @@
   margin-top: 0;
   margin-bottom: -($spacing * 3);
   // overflow: hidden;
-  @media(max-width: 950px) {
+  @media(max-width: 800px) {
     justify-content: center;
   }
 
@@ -78,12 +78,21 @@
     text-align: center;
     margin-bottom: $spacing * 3;
 
+    @media(max-width: 800px) {
+      flex: 0 0 25%;
+    }
+
+    @media(max-width: 600px) {
+      flex: 0 0 33%;
+    }
+
     .item {
       display: inline-block;
-      padding: ($spacing * 1) ($spacing * 4);
+      padding: ($spacing * 1) 0;
       border-radius: 5px;
       transition: .15s ease-in-out;
       margin-top: -($spacing * 1);
+      display: block;
 
       &.clickable {
         cursor: pointer;
@@ -107,8 +116,8 @@
 }
 
 .item-image {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   display: inline-block;
   background-size: cover !important;
 }
