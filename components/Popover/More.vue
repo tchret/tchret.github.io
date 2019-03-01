@@ -30,10 +30,11 @@ import FacebookIcon from '~/components/icons/Social/Facebook'
 import ProductHuntIcon from '~/components/icons/Social/ProductHunt'
 import TwitterIcon from '~/components/icons/Social/Twitter'
 import InstagramIcon from '~/components/icons/Social/Instagram'
+import GithubIcon from '~/components/icons/Social/Github'
 
 export default {
   props: ['active'],
-  components: { DribbbleIcon, FacebookIcon, ProductHuntIcon, TwitterIcon, InstagramIcon },
+  components: { DribbbleIcon, FacebookIcon, ProductHuntIcon, TwitterIcon, InstagramIcon, GithubIcon },
   methods: {
     camelize(str) {
       return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(letter, index) {

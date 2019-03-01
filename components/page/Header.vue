@@ -28,6 +28,13 @@
                 <popover-more :active='popoverMoreActive' ></popover-more>
               </div>
           </div>
+          <div class='social'>
+            <a
+              v-for='(link, i) in siteData().links'
+            >
+
+            </a>
+          </div>
           <a class='button' v-if='!displayContactInfos' @click='displayContactInfos = true'>
             <send-white-icon></send-white-icon>
             Contact
@@ -55,8 +62,28 @@
   import PopoverMore from '~/components/Popover/More'
   import Tabs from '~/components/Tabs'
 
+  import DribbbleIcon from '~/components/icons/Social/Dribbble'
+  import FacebookIcon from '~/components/icons/Social/Facebook'
+  import ProductHuntIcon from '~/components/icons/Social/ProductHunt'
+  import TwitterIcon from '~/components/icons/Social/Twitter'
+  import InstagramIcon from '~/components/icons/Social/Instagram'
+  import GithubIcon from '~/components/icons/Social/Github'
+
   export default {
-    components: { Container, SendIcon, SendWhiteIcon, MoreIcon, PopoverMore, Tabs },
+    components: {
+      Container,
+      SendIcon,
+      SendWhiteIcon,
+      MoreIcon,
+      PopoverMore,
+      Tabs,
+      DribbbleIcon,
+      FacebookIcon,
+      ProductHuntIcon,
+      TwitterIcon,
+      InstagramIcon,
+      GithubIcon
+    },
     data() {
       return {
         imageLoaded: false,
