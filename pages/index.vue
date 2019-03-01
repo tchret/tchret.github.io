@@ -2,8 +2,8 @@
   <div>
     <!-- <Slider></Slider> -->
     <div>
-      <ItemList :items='siteData().skills' :title='`Skills & services`'></ItemList>
       <ItemList :items='siteData().featurings' :title='`Featured on`'></ItemList>
+      <ItemList :items='siteData().skills' :title='`Skills & services`'></ItemList>
       <ItemList :items='siteData().clients' :title='`Selected clients`'></ItemList>
       <ItemList :items='siteData().tools' :title='`Tools`'></ItemList>
     </div>
