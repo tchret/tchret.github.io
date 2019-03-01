@@ -28,11 +28,13 @@
                 <popover-more :active='popoverMoreActive' ></popover-more>
               </div>
           </div>
-          <div class='social'>
+          <div class='social-icons'>
             <a
               v-for='(link, i) in siteData().links'
+              :href='link.href'
+              target='_blank'
             >
-
+              <div :is='`${iconName(link.name)}Icon`'></div>
             </a>
           </div>
           <a class='button' v-if='!displayContactInfos' @click='displayContactInfos = true'>
@@ -68,6 +70,8 @@
   import TwitterIcon from '~/components/icons/Social/Twitter'
   import InstagramIcon from '~/components/icons/Social/Instagram'
   import GithubIcon from '~/components/icons/Social/Github'
+
+  import { camelCase } from 'lodash'
 
   export default {
     components: {
@@ -108,8 +112,12 @@
         this.timer = setTimeout(() => {
           this.popoverMoreActive = false
         }, 300)
+      },
+      iconName(name) {
+        return camelCase(name)
       }
     }
+
   }
 </script>
 
@@ -175,6 +183,10 @@
     display: flex;
     align-items: center;
     transition: .15s ease-in-out opacity;
+
+    @media(min-width: 650px) {
+      display: none;
+    }
 
     &:hover, &.hovered {
       opacity: .6;
@@ -275,6 +287,36 @@
 .description {
   font-size: 16px;
   padding: ($spacing * 5) 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: $spacing * 2;
+
+  @media(max-width: 650px) {
+    display: none;
+  }
+
+  a {
+    margin-left: $spacing * 1.5;
+    opacity: .8;
+    transition: .15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
 }
 
 </style>
