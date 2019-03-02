@@ -28,8 +28,9 @@ html, input
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+  // width: 100%;
+  // overflow: scroll;
+  // overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

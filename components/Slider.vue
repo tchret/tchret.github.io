@@ -1,4 +1,5 @@
 <template>
+  <div class='component'>
   <Container>
     <no-ssr>
       <slick :options='slickOptions'>
@@ -12,6 +13,7 @@
       </slick>
     </no-ssr>
   </Container>
+  </div>
 </template>
 
 <script>
@@ -41,6 +43,10 @@
 </script>
 
 <style scoped lang='scss'>
+
+.component {
+  overflow: hidden;
+}
 
 .container {
   min-height: 500px;
