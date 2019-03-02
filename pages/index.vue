@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Slider></Slider> -->
+    <Slider></Slider>
     <div>
       <ItemList :items='siteData().featurings' :title='`Featured on`'></ItemList>
       <ItemList :items='siteData().skills' :title='`Skills & services`'></ItemList>

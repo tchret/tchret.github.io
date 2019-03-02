@@ -45,14 +45,22 @@ tabs:
     slug: skills
 
 case_studies:
-  - slug: 'aircall'
-    client: aircall
-  - slug: 'manolo'
-    client: manolo_chretien
-  - slug: 'pages'
-    image: pages.png
+  - slug: omnidoc
+    year: 2019
+    production: Branding and UI Design
   - slug: 'redbull'
-    client: redbull
+    year: 2018
+    production: 'Twitch extension'
+  - slug: 'pages'
+    title: 'Pages.xyz'
+    year: 2018
+  - slug: 'manolo_chretien'
+    production: 'Website'
+    year: 2019
+  # - slug: 'aircall'
+  #   production: 'Desktop app'
+  #   year: 2018
+
 
 clients:
   - name: Hackerloop
