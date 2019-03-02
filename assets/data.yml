@@ -47,7 +47,7 @@ tabs:
 case_studies:
   - slug: omnidoc
     year: 2019
-    production: Branding and UI Design
+    production: Dasbhboard
   - slug: 'redbull'
     year: 2018
     production: 'Twitch extension'
