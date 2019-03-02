@@ -49,6 +49,7 @@
 
   @media(max-width: 950px) {
     min-height: auto;
+    padding: 0;
   }
 }
 
@@ -59,6 +60,8 @@
 
 .container /deep/ .slick-slide {
   padding: 0 $spacing * 2;
+
+
 }
 
 </style>
