@@ -42,7 +42,7 @@ export default {
       }).replace(/\s+/g, '');
     },
     handleLinkClick(link) {
-      window.open(link.href, '_blank')
+      window.open(link.url, '_blank')
     }
   }
 }

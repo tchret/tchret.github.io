@@ -4,34 +4,37 @@ description: |-
   My name is Thomas Chrétien (tchret) - I’m a french coding designer with a natural attraction for interfaces, interactions, branding & typography.
   <br/>
   <br/>
-  I am currently re-building my portfolio. <a href='http://twitter.com/tchret' target='_blank'>Contact me to get work samples</a>.
+  I am currently operating as freelance Product Designer.
 email: 'tchret@gmail.com'
 avatar: tchret.jpg
 slug: tchret
 links:
   - name: Twitter
-    href: http://twitter.com/tchret
+    url: http://twitter.com/tchret
     color: '#2AA3F0'
 
   - name: Dribbble
-    href: http://dribbble.com/tchret
+    url: http://dribbble.com/tchret
     color: '#ea4c89'
 
   - name: Facebook
-    href: http://facebook.com/tchret
+    url: http://facebook.com/tchret
     color: '#3C5B96'
 
   - name: Product Hunt
-    href: https://producthunt.com/@tchret
+    url: https://producthunt.com/@tchret
     color: '#D85636'
 
   - name: Instagram
-    href: https://instagram.com/tchret
+    url: https://instagram.com/tchret
     color: '#EB4B5A'
 
   - name: Github
-    href: https://github.com/tchret
+    url: https://github.com/tchret
     color: '#EB4B5A'
+
+  - name: Linkedin
+    url: https://linkedin.com/in/tchret
 
 tabs:
   - name: Portfolio
@@ -45,6 +48,9 @@ tabs:
     slug: skills
 
 case_studies:
+  - slug: 'manolo_chretien'
+    production: 'Website'
+    year: 2019
   - slug: omnidoc
     year: 2019
     production: Dashboard
@@ -54,9 +60,6 @@ case_studies:
   - slug: 'pages'
     title: 'Pages.xyz'
     year: 2018
-  - slug: 'manolo_chretien'
-    production: 'Website'
-    year: 2019
   # - slug: 'aircall'
   #   production: 'Desktop app'
   #   year: 2018

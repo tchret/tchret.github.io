@@ -31,7 +31,7 @@
           <div class='social-icons'>
             <a
               v-for='(link, i) in siteData().links'
-              :href='link.href'
+              :href='link.url'
               target='_blank'
             >
               <div :is='`${iconName(link.name)}Icon`'></div>
@@ -183,9 +183,9 @@
     display: flex;
     align-items: center;
     transition: .15s ease-in-out opacity;
+    display: none;
 
     @media(min-width: 650px) {
-      display: none;
     }
 
     &:hover, &.hovered {
