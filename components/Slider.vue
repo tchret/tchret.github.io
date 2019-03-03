@@ -2,11 +2,12 @@
   <div class='component'>
   <Container>
     <no-ssr>
-      <slick :options='slickOptions'>
+      <slick :options='slickOptions' ref='slick'>
         <div
           v-for='(caseStudy, i) in siteData().case_studies'
           class='image-container'
           :key='i'
+          @click='handleClick'
         >
           <CaseStudyItem v-bind='caseStudy'></CaseStudyItem>
         </div>
@@ -37,6 +38,11 @@
           autoplay: true,
           autoplaySpeed: 6000
         }
+      }
+    },
+    methods: {
+      handleClick() {
+        this.$refs.slick.next();
       }
     }
   }
