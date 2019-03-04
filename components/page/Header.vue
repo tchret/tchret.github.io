@@ -70,6 +70,7 @@
   import TwitterIcon from '~/components/icons/Social/Twitter'
   import InstagramIcon from '~/components/icons/Social/Instagram'
   import GithubIcon from '~/components/icons/Social/Github'
+  import LinkedinIcon from '~/components/icons/Social/Linkedin'
 
   import { camelCase } from 'lodash'
 
@@ -86,7 +87,8 @@
       ProductHuntIcon,
       TwitterIcon,
       InstagramIcon,
-      GithubIcon
+      GithubIcon,
+      LinkedinIcon
     },
     data() {
       return {
@@ -314,8 +316,11 @@
 
   svg {
     width: 16px;
-    height: 16px;
     display: block;
+    height: 17px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
   }
 }
 

@@ -9,9 +9,6 @@ email: 'tchret@gmail.com'
 avatar: tchret.jpg
 slug: tchret
 links:
-  - name: Twitter
-    url: http://twitter.com/tchret
-    color: '#2AA3F0'
 
   - name: Dribbble
     url: http://dribbble.com/tchret
@@ -21,6 +18,9 @@ links:
     url: http://facebook.com/tchret
     color: '#3C5B96'
 
+
+  - name: Linkedin
+    url: https://linkedin.com/in/tchret
   - name: Product Hunt
     url: https://producthunt.com/@tchret
     color: '#D85636'
@@ -32,10 +32,9 @@ links:
   - name: Github
     url: https://github.com/tchret
     color: '#EB4B5A'
-
-  - name: Linkedin
-    url: https://linkedin.com/in/tchret
-
+  - name: Twitter
+    url: http://twitter.com/tchret
+    color: '#2AA3F0'
 tabs:
   - name: Portfolio
     active: true
