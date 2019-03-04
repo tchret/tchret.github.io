@@ -8,6 +8,7 @@
         <div class='title' v-else>{{title}}</div>
         <div class='tagline'>{{year}}</div>
       </div>
+      <a v-if='url' :href='url' target='_blank' class='button'>View live</a>
     </div>
     <div
       :style='{backgroundImage: `url(/case_studies/${slug}/1.jpg)`}'
@@ -22,7 +23,7 @@
 import { find, snakeCase } from 'lodash'
 
 export default {
-  props: ['slug', 'production', 'year', 'title'],
+  props: ['slug', 'production', 'year', 'title', 'url'],
   computed: {
     client() {
       return find(this.siteData().clients, (client) => { return snakeCase(client.name) == this.slug })
@@ -35,6 +36,20 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+.button {
+  margin-left: auto;
+  line-height: 32px;
+  margin-left: auto;
+  padding: 0 12px;
+  box-shadow: 0px 0px 0px 1px;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #828e9b;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(-15%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
 .case-study {
   height: 500px;
   width: 100%;
@@ -44,6 +59,8 @@ export default {
   cursor: pointer;
   overflow: hidden;
   box-shadow: 0px 1px 2px 0px rgba($dark, .15);
+
+
   @media(max-width: 950px) {
     height: auto;
     padding-bottom: 59%;
@@ -91,5 +108,11 @@ export default {
   }
 }
 
+.slick-center {
+  .button {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
 
 </style>

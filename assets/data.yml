@@ -50,15 +50,19 @@ tabs:
 case_studies:
   - slug: 'manolo_chretien'
     production: 'Website'
+    url: 'http://manolochretien.com'
     year: 2019
   - slug: omnidoc
     year: 2019
+    url: 'http://omnidoc.fr'
     production: Dashboard
   - slug: 'redbull'
+    url: https://www.youtube.com/watch?v=qlJlXFYFlhc
     year: 2018
     production: 'Twitch extension'
   - slug: 'pages'
     title: 'Pages.xyz'
+    url: 'http://pages.xyz'
     year: 2018
   # - slug: 'aircall'
   #   production: 'Desktop app'
