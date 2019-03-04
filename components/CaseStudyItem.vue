@@ -106,7 +106,7 @@ export default {
   z-index: 2;
   color: $dark;
   align-items: center;
-  padding-bottom: $spacing * 2;
+  padding-bottom: $spacing * 4;
   opacity: 0;
 
   transition: transform .5s ease-in-out, opacity .5s ease-in-out;
