@@ -41,8 +41,10 @@
       }
     },
     methods: {
-      handleClick() {
-        this.$refs.slick.next();
+      handleClick(e) {
+        if(e.currentTarget.parentElement.parentElement.classList.contains('slick-current')) {
+          this.$refs.slick.next();
+        }
       }
     }
   }
