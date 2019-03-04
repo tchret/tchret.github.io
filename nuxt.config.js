@@ -45,7 +45,8 @@ module.exports = {
   */
   modules: [
     ['nuxt-sass-resources-loader', resolve(__dirname, 'assets/fonts.scss')],
-    ['nuxt-sass-resources-loader', resolve(__dirname, 'assets/variables.scss')]
+    ['nuxt-sass-resources-loader', resolve(__dirname, 'assets/variables.scss')],
+    '@nuxtjs/axios'
   ],
 
   /*

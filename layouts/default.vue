@@ -7,12 +7,14 @@
 
 <script>
   import Header from '~/components/page/Header'
+  import Container from '~/components/Container'
   export default {
-    components: { Header }
+    components: { Header, Container }
   }
 </script>
 
 <style lang='scss'>
+
 html, input
 {
   font-family: "AeroportM", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -31,6 +33,7 @@ html {
   // width: 100%;
   // overflow: scroll;
   // overflow-x: hidden;
+  padding-bottom: 50px;
 }
 
 ::-webkit-scrollbar {

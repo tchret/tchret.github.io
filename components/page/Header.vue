@@ -51,8 +51,8 @@
       </nav>
       <div class='description' v-html='siteData().description'>
       </div>
-      <tabs></tabs>
     </container>
+    <tabs></tabs>
   </div>
 </template>
 

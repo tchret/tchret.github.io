@@ -12,6 +12,7 @@
     "deploy": "rm -rf dist && DEPLOY_ENV=GH_PAGES nuxt generate && push-dir --dir=dist --branch=master --cleanup --verbose"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.4.0",
     "js-yaml": "^3.12.1",
     "js-yaml-loader": "^1.0.1",
     "json-loader": "^0.5.7",

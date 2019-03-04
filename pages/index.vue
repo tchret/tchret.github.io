@@ -7,7 +7,6 @@
       <ItemList :items='siteData().clients' :title='`Selected clients`'></ItemList>
       <ItemList :items='siteData().tools' :title='`Tools`'></ItemList>
       <ItemList :items='siteData().links' :title='`Find me on`'></ItemList>
-
     </div>
   </div>
 </template>
@@ -16,10 +15,11 @@
 import Header from '~/components/page/Header'
 import ItemList from '~/components/page/ItemList'
 import Slider from '~/components/Slider'
+import Instagram from '~/components/Instagram'
 
 export default {
   components: {
-    Header, ItemList, Slider
+    Header, ItemList, Slider, Instagram
   }
 }
 </script>

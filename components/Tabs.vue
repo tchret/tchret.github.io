@@ -24,6 +24,8 @@
   justify-content: center;
   margin-bottom: -1px;
   margin-top: -8px;
+  position: sticky;
+  top: 0px;
 
   @media(max-width: 800px) {
     margin: 0 -12px;
