@@ -51,8 +51,6 @@ export default {
   font-weight: 500;
   color: #828e9b;
   text-decoration: none;
-  opacity: 0;
-  transform: translateY(-15%);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
   display: inline-flex;
   align-items: center;
@@ -109,6 +107,10 @@ export default {
   color: $dark;
   align-items: center;
   padding-bottom: $spacing * 2;
+  opacity: 0;
+
+  transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+
   .image {
     width: 42px;
     height: 42px;
@@ -130,8 +132,8 @@ export default {
   }
 }
 
-.slick-center {
-  .button {
+.slick-active {
+  .header {
     opacity: 1;
     transform: translateY(0)
   }
