@@ -8,7 +8,10 @@
         <div class='title' v-else>{{title}}</div>
         <div class='tagline'>{{year}}</div>
       </div>
-      <a v-if='url' :href='url' target='_blank' class='button'>View live</a>
+      <a v-if='url' :href='url' target='_blank' class='button'>
+        <ExternalLinkIcon></ExternalLinkIcon>
+        View live
+      </a>
     </div>
     <div
       :style='{backgroundImage: `url(/case_studies/${slug}/1.jpg)`}'
@@ -21,8 +24,10 @@
 
 <script>
 import { find, snakeCase } from 'lodash'
+import ExternalLinkIcon from '~/components/icons/ExternalLink'
 
 export default {
+  components: { ExternalLinkIcon },
   props: ['slug', 'production', 'year', 'title', 'url'],
   computed: {
     client() {
@@ -41,7 +46,7 @@ export default {
   line-height: 32px;
   margin-left: auto;
   padding: 0 12px;
-  box-shadow: 0px 0px 0px 1px;
+  box-shadow: 0px 0px 0px 1px #D0D4D9, 0px 1px 1px rgba(black, .08);
   border-radius: 3px;
   font-weight: 500;
   color: #828e9b;
@@ -49,6 +54,23 @@ export default {
   opacity: 0;
   transform: translateY(-15%);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  transition: box-shadow .15s ease-in-out;
+
+  @media(max-width: 800px) {
+    display: none;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 0px 1px darken(#D0D4D9, 10%), 0px 1px 1px rgba(black, .08);
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+    margin-right: $spacing / 2;
+  }
 }
 .case-study {
   height: 500px;
