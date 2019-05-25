@@ -63,6 +63,7 @@
   import MoreIcon from '~/components/icons/More'
   import PopoverMore from '~/components/Popover/More'
   import Tabs from '~/components/Tabs'
+  import ItemList from '~/components/page/ItemList'
 
   import DribbbleIcon from '~/components/icons/Social/Dribbble'
   import FacebookIcon from '~/components/icons/Social/Facebook'
@@ -88,7 +89,8 @@
       TwitterIcon,
       InstagramIcon,
       GithubIcon,
-      LinkedinIcon
+      LinkedinIcon,
+      ItemList
     },
     data() {
       return {

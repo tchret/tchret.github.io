@@ -1,6 +1,6 @@
 <template>
   <div class='clients'>
-    <ItemList :items='siteData().clients' :title='false'></ItemList>
+    <ItemList :items='siteData().clients' :title='`Selected clients`'></ItemList>
   </div>
 </template>
 

@@ -7,7 +7,7 @@
       <div class='list-container'>
         <div class='list'>
           <div class='item-container' v-for='item in items'>
-            <div :class='{item: true, clickable: item.url}' @click='item.url && handleClickItem(item)'>
+            <div :class='{item: true, clickable: item.url}' @click='item.url && handleClickItem(item)'  v-if='!item.hidden'>
               <div class='item-image' :style='{backgroundImage: `url(${iconUrl(item.name)})`}'>
               </div>
               <div>
@@ -29,7 +29,7 @@
   import { snakeCase } from 'lodash'
 
   export default {
-    props: ['items', 'title'],
+    props: ['items', 'title', 'hidden'],
     components: { Container, HeaderTitle },
     methods: {
       iconUrl(name) {

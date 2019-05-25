@@ -69,10 +69,12 @@ case_studies:
 
 
 clients:
-  - name: Hackerloop
-    url: 'http://hackerloop.com'
+  - name: Airbnb
+    url: 'http://airbnb.com'
   - name: Redbull
     url: 'https://redbull.com'
+  - name: CitizenPlane
+    url: 'http://citizenplane.com'
   - name: Aircall
     url: 'http://aircall.io'
   - name: Mozza
@@ -81,8 +83,11 @@ clients:
     url: 'https://omnidoc.fr'
   - name: Le Wagon
     url: 'https://lewagon.com'
+  - name: Hackerloop
+    url: 'http://hackerloop.com'
   - name: Manolo Chrétien
     url: 'https://manolochretien.com'
+    hidden: true
 
 skills:
   - name: 'UX / UI'
